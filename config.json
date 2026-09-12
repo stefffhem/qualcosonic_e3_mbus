@@ -1,0 +1,35 @@
+{
+  "name": "Qualcosonic E3 M-Bus Reader",
+  "version": "0.2",
+  "slug": "qualcosonic_e3_mbus",
+  "description": "Liests Qualcosonic E3 Wärmezähler über IR (M-Bus) und sendet Daten per MQTT",
+  "arch": ["armv7", "armhf", "aarch64", "amd64"],
+  "startup": "services",
+  "boot": "auto",
+  "options": {
+    "serial_device": "/dev/ttyUSB0",
+    "baudrate": 2400,
+    "mqtt_broker": "core-mosquitto",
+    "mqtt_port": 1883,
+    "mqtt_user": "Steffen",
+    "mqtt_password": "!Steffe75",
+    "mqtt_topic_prefix": "homeassistant/sensor/qualcosonic_e3",
+    "poll_interval": 60,
+    "mqtt_discovery": true,
+    "discovery_prefix": "homeassistant"
+  },
+  "schema": {
+    "serial_device": "str",
+    "baudrate": "int",
+    "mqtt_broker": "str",
+    "mqtt_port": "int",
+    "mqtt_user": "str",
+    "mqtt_password": "str",
+    "mqtt_topic_prefix": "str",
+    "poll_interval": "int",
+    "mqtt_discovery": "bool",
+    "discovery_prefix": "str"
+  },
+  "map": ["config"]
+}
+
