@@ -1,3 +1,3 @@
-pymbus2
+python-mbus
 pyserial
 paho-mqtt
