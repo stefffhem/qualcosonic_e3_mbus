@@ -3,9 +3,14 @@ FROM python:3.11-alpine
 RUN apk add --no-cache \
     build-base \
     python3-dev \
-    musl-dev
+    musl-dev \
+    libxml2-dev \
+    libxslt-dev \
+    libmbus \
+    libmbus-dev
 
 WORKDIR /app
+
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
